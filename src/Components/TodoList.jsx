@@ -28,6 +28,12 @@ const TodoList = () => {
         newTodos.splice(index, 1);
         setTodos(newTodos);
       };
+
+    const handleDeleteElement = (index, listIndex) => {
+        const newTodos = [...todos];
+        newTodos[index].lists.splice(listIndex, 1);
+        setTodos(newTodos);
+    };
   
   return (
     <>
@@ -55,6 +61,7 @@ const TodoList = () => {
              {todo.lists.map((list, listIndex) => (
                <li key={listIndex} className='todo_inside_list'>
                 <p>{list}</p>
+                <button className="delete-button-list" onClick={() => handleDeleteElement(index, listIndex)}>Delete List Item</button>  {/*vamos a añadir boton para quitar elementos*/}
                </li>
              ))}
            </ul>

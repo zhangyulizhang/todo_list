@@ -76,7 +76,7 @@
     height: 40px;
 }
 
-.delete-button-heading {
+.delete-button-list, .delete-button-heading {
     height: 40px;
     background-color: rgb(46, 163, 46);
     color: #fff;
