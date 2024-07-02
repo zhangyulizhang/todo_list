@@ -55,7 +55,6 @@ const TodoList = () => {
              {todo.lists.map((list, listIndex) => (
                <li key={listIndex} className='todo_inside_list'>
                 <p>{list}</p>
-                <button className="delete-button-list">Delete List Item</button>
                </li>
              ))}
            </ul>
